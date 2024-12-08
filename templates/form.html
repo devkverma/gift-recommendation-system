@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style_form.css">
+    <title>Gift Recommendation System</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Gift Recommendation Form</h1>
+        <form action="/recommend" method="POST">
+            <!-- Recipient Type -->
+            <label for="recipient">To whom are you gifting?</label>
+            <select id="recipient" name="recipient" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="daughter">Daughter</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="wife">Wife</option>
+                <option value="son">Son</option>
+                <option value="friend">Friend</option>
+                <option value="colleague">Colleague</option>
+            </select>
+
+            <!-- Food Preference -->
+            <label>Do you prefer vegetarian or non-vegetarian?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="food_preference" value="veg" required> Vegetarian</label>
+                <label><input type="radio" name="food_preference" value="non-veg" required> Non-Vegetarian</label>
+            </div>
+
+            <!-- Age of the Recipient -->
+            <label for="age">Recipient's Age (optional)</label>
+            <input type="number" id="age" name="age" placeholder="Enter age">
+
+            <label for="cuisine">What cuisine do you prefer? (optional)</label>
+            <select id="cuisine" name="cuisine">
+                <option value="" disabled selected>Select an option</option>
+                <option value="italian">Italian</option>
+                <option value="indian">Indian</option>
+                <option value="chinese">Chinese</option>
+                <option value="japanese">Japanese</option>
+                <option value="mexican">Mexican</option>
+                <option value="continental">Continental</option>
+            </select>
+
+            <!-- Occasion -->
+            <label for="occasion">What's the occasion? (optional)</label>
+            <input type="text" id="occasion" name="occasion" placeholder="e.g., Birthday, Anniversary">
+
+            <button type="submit">Get Recommendations</button>
+        </form>
+    </div>
+</body>
+</html>
