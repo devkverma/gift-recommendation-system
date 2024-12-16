@@ -23,7 +23,7 @@ class Recommend:
         vectorizer_url = "https://drive.google.com/uc?id=19F85YGfOAcBL9GuHYDiGyAdnYhimJqu8"
         vectors_url = "https://drive.google.com/uc?id=1xeEPueik57VXKw6CmDXe0hA5p7auKCCK"
 
-        if os.path.isdir(f"{base_dir}/gift-recommendation-system/scripts/data.pkl"):
+        if os.path.isfile(f"{base_dir}/gift-recommendation-system/scripts/data.pkl"):
             with open(f"{base_dir}/gift-recommendation-system/scripts/data.pkl", 'rb') as file:
                 self.data = pickle.load(file)
         else:
@@ -31,7 +31,7 @@ class Recommend:
             with open(f"{base_dir}/gift-recommendation-system/scripts/data.pkl", 'rb') as file:
                 self.data = pickle.load(file)
 
-        if os.path.isdir(f"{base_dir}/gift-recommendation-system/scripts/vectorizer.pkl"):
+        if os.path.isfile(f"{base_dir}/gift-recommendation-system/scripts/vectorizer.pkl"):
             with open(f"{base_dir}/gift-recommendation-system/scripts/vectorizer.pkl", 'rb') as file:
                 self.vectorizer = pickle.load(file)
         else:
@@ -39,7 +39,7 @@ class Recommend:
             with open(f"{base_dir}/gift-recommendation-system/scripts/vectorizer.pkl", 'rb') as file:
                 self.vectorizer = pickle.load(file)
 
-        if os.path.isdir(f"{base_dir}/gift-recommendation-system/scripts/vectors.pkl"):
+        if os.path.isfile(f"{base_dir}/gift-recommendation-system/scripts/vectors.pkl"):
             with open(f"{base_dir}/gift-recommendation-system/scripts/vectors.pkl", 'rb') as file:
                 self.vectors = pickle.load(file)
         else:
