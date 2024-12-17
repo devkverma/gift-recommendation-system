@@ -6,3 +6,4 @@ scikit-learn
 gdown
 waitress
 python-dotenv
+stopwords
