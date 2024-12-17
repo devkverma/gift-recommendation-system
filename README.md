@@ -165,4 +165,39 @@ Please ensure that your code follows the project’s coding conventions, and con
 ├── notebook/             # Jupyter notebook for model creation
 
 ```
+Here’s how you can explain the mechanism behind your project in the README:
+
+---
+
+## Mechanism Behind the Gift Recommendation App
+
+The core mechanism of the Gift Recommendation App is built around a **machine learning-based recommendation engine** that processes user input and matches it with the best products. Here’s a breakdown of how the recommendation system works:
+
+1. **Dataset and Preprocessing:**
+   - Initially, I had a dataset containing over **200,000 reviews** of various products. After cleaning the data, I was able to extract **75,000+ unique products**.
+   - The reviews and comments for these products were then converted into **vectors** using various **Natural Language Processing (NLP) techniques** like tokenization, stopwords removal, and **TF-IDF (Term Frequency-Inverse Document Frequency)**. This resulted in a **75000 x 5000 matrix**, where each row represented a product, and the columns corresponded to various features derived from the reviews.
+
+2. **User Input Processing:**
+   - When a user enters their preferences through the form (such as recipient details, food preferences, taste, and occasion), the app creates a **prompt** using **f-strings** to make the input flexible.
+   - This prompt is then converted into a vector using the same preprocessing techniques (tokenization, stopwords removal, TF-IDF). This vectorization ensures that the user’s input is represented in the same format as the cleaned product data.
+
+3. **Cosine Similarity:**
+   - To find the most relevant products based on the user’s input, I apply **cosine similarity** between the user’s vector and the pre-existing product vectors.
+   - Cosine similarity measures the cosine of the angle between two vectors, which gives a sense of how similar the two are. A lower angle (closer to 1) means higher similarity.
+
+4. **Product Matching:**
+   - Based on the cosine similarity scores, the app identifies the **3 most similar products** to the user’s input.
+   - The result is a **product ID** for each of the top 3 matches.
+
+5. **Fetching Product Details:**
+   - Using these product IDs, the app calls a **third-party API** to fetch details of the matched products, such as:
+     - **Product title**
+     - **Price**
+     - **Description**
+     - **Image URL**
+   - These details are then displayed on the results page for the user to explore.
+
+This workflow ensures that the product recommendations are both relevant and personalized based on the user’s unique preferences.
+
+---
 
