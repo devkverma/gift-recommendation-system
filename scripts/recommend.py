@@ -6,11 +6,11 @@ import string
 import gdown
 from nltk import word_tokenize
 from nltk.stem.snowball import SnowballStemmer
-from nltk.corpus import stopwords
+from stopwords import get_stopwords
 from sklearn.metrics.pairwise import cosine_similarity
 
 stemmer = SnowballStemmer("english")
-stop_words = set(stopwords.words('english'))
+stop_words = set(get_stopwords('en'))
 punctuations = string.punctuation
 
 class Recommend:
