@@ -17,34 +17,32 @@ class Recommend:
 
     def __init__(self):
 
-        base_dir = os.getcwd()
-        
         data_url = "https://drive.google.com/uc?id=1Zg8J7dSM6T8ykvUpCnEFbe6iSDjaaQLE"
         vectorizer_url = "https://drive.google.com/uc?id=19F85YGfOAcBL9GuHYDiGyAdnYhimJqu8"
         vectors_url = "https://drive.google.com/uc?id=1xeEPueik57VXKw6CmDXe0hA5p7auKCCK"
 
-        if os.path.isfile(f"{base_dir}/gift-recommendation-system/scripts/data.pkl"):
-            with open(f"{base_dir}/gift-recommendation-system/scripts/data.pkl", 'rb') as file:
+        if os.path.isfile(f"../scripts/data.pkl"):
+            with open(f"../scripts//scripts/data.pkl", 'rb') as file:
                 self.data = pickle.load(file)
         else:
-            gdown.download(data_url, f"{base_dir}/gift-recommendation-system/scripts/data.pkl", quiet=False)
-            with open(f"{base_dir}/gift-recommendation-system/scripts/data.pkl", 'rb') as file:
+            gdown.download(data_url, f"../scripts/data.pkl", quiet=False)
+            with open(f"../scripts/data.pkl", 'rb') as file:
                 self.data = pickle.load(file)
 
-        if os.path.isfile(f"{base_dir}/gift-recommendation-system/scripts/vectorizer.pkl"):
-            with open(f"{base_dir}/gift-recommendation-system/scripts/vectorizer.pkl", 'rb') as file:
+        if os.path.isfile(f"../scripts/vectorizer.pkl"):
+            with open(f"../scripts/vectorizer.pkl", 'rb') as file:
                 self.vectorizer = pickle.load(file)
         else:
-            gdown.download(vectorizer_url, f"{base_dir}/gift-recommendation-system/scripts/vectorizer.pkl", quiet=False)
-            with open(f"{base_dir}/gift-recommendation-system/scripts/vectorizer.pkl", 'rb') as file:
+            gdown.download(vectorizer_url, f"../scripts/vectorizer.pkl", quiet=False)
+            with open(f"../scripts/vectorizer.pkl", 'rb') as file:
                 self.vectorizer = pickle.load(file)
 
-        if os.path.isfile(f"{base_dir}/gift-recommendation-system/scripts/vectors.pkl"):
-            with open(f"{base_dir}/gift-recommendation-system/scripts/vectors.pkl", 'rb') as file:
+        if os.path.isfile(f"../scripts/vectors.pkl"):
+            with open(f"../scripts/vectors.pkl", 'rb') as file:
                 self.vectors = pickle.load(file)
         else:
-            gdown.download(vectors_url, f"{base_dir}/gift-recommendation-system/scripts/vectors.pkl", quiet=False)
-            with open(f"{base_dir}/gift-recommendation-system/scripts/vectors.pkl", 'rb') as file:
+            gdown.download(vectors_url, f"../scripts/vectors.pkl", quiet=False)
+            with open(f"../scripts/vectors.pkl", 'rb') as file:
                 self.vectors = pickle.load(file)
 
     def __cleanText(self, text):
