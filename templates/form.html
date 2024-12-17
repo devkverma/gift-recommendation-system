@@ -14,35 +14,33 @@
             <label for="recipient">To whom are you gifting?</label>
             <select id="recipient" name="recipient" required>
                 <option value="" disabled selected>Select an option</option>
-                <option value="daughter">Daughter</option>
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="wife">Wife</option>
-                <option value="son">Son</option>
-                <option value="friend">Friend</option>
-                <option value="colleague">Colleague</option>
+                <option value="wife / lady /woman / girl / person">Wife</option>
+                <option value="daughter / lady / woman / girl/ person">Daughter</option>
+                <option value="son / man / boy / guy / person">Son</option>
+                <option value="friend / man / lady / woman / boy / guy / girl / person">Friend</option>
+                <option value="colleague / man / lady / woman / boy / guy / girl / person">Colleague</option>
+                <option value="dog / pet">Dog</option>
+                <option value="cat / pet">Cat</option>
             </select>
 
             <!-- Food Preference -->
-            <label>Do you prefer vegetarian or non-vegetarian?</label>
+            <label>Do you prefer vegetarian / non-vegetarian / vegan?</label>
             <div class="radio-group">
-                <label><input type="radio" name="food_preference" value="veg" required> Vegetarian</label>
-                <label><input type="radio" name="food_preference" value="non-veg" required> Non-Vegetarian</label>
+                <label><input type="radio" name="food_preference" value="vegetarian" required> Vegetarian</label>
+                <label><input type="radio" name="food_preference" value="non-vegetarian" required> Non-Vegetarian</label>
+                <label><input type="radio" name="food_preference" value="vegan" required> Vegan </label>
             </div>
 
-            <!-- Age of the Recipient -->
-            <label for="age">Recipient's Age (optional)</label>
-            <input type="number" id="age" name="age" placeholder="Enter age">
-
-            <label for="cuisine">What cuisine do you prefer? (optional)</label>
-            <select id="cuisine" name="cuisine">
+            <!-- Taste of the Recipient -->
+            <label for="taste">What their tastebuds want?</label>
+            <select id="taste" name="taste">
                 <option value="" disabled selected>Select an option</option>
-                <option value="italian">Italian</option>
-                <option value="indian">Indian</option>
-                <option value="chinese">Chinese</option>
-                <option value="japanese">Japanese</option>
-                <option value="mexican">Mexican</option>
-                <option value="continental">Continental</option>
+                <option value="sweet / dessert">Sweet</option>
+                <option value="sour / lemon / citric">Sour</option>
+                <option value="spicy / chilly">Spicy</option>
+                <option value="salty / tasty">Salty</option>
+                <option value="bitter">Bitter</option>
+                <option value="umami / meaty / fleshy">Umami</option>
             </select>
 
             <!-- Occasion -->

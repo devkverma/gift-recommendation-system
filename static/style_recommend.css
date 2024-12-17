@@ -1,13 +1,22 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
 }
 h1 {
     text-align: center;
     margin: 20px 0;
     color: #333;
+    text-shadow: 
+        -1px -1px 0 white,  /* Top left */
+         1px -1px 0 white,  /* Top right */
+        -1px  1px 0 white,  /* Bottom left */
+         1px  1px 0 white;  /* Bottom right */
+    
 }
 .container {
     display: flex;

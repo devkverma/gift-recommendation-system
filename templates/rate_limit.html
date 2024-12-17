@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Limit Exceeded</title>
+    <link rel="stylesheet" href="../static/style_rate.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Oops! You've hit the rate limit.</h1>
+        <p>Don't worry, you can try again in <strong>{{ seconds_left }}</strong> seconds.</p>
+        <div class="retry-info">
+            <p>Please come back later. Thank you for your patience!</p>
+        </div>
+        <a href="/" class="btn">Go Back to Home</a>
+    </div>
+</body>
+</html>

@@ -5,3 +5,4 @@ nltk
 scikit-learn
 gdown
 waitress
+python-dotenv

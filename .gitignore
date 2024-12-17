@@ -1,3 +1,5 @@
+__pycache__
 data.pkl
 vectorizer.pkl
 vectors.pkl
+.env

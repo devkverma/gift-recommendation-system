@@ -1,7 +1,10 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f5b041, #f0e68c);
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color: #333;
     display: flex;
     justify-content: center;
