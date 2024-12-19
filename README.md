@@ -140,7 +140,7 @@ We welcome contributions! If you'd like to contribute to this project, please fo
 2. **Clone your fork** to your local machine.
 3. **Create a new branch** (`git checkout -b feature-branch`).
 4. **Make your changes**.
-5. **Commit your changes** (`git commit -am 'Add new feature'`).
+5. **Commit your changes** (`git commit -m 'Add new feature'`).
 6. **Push to the branch** (`git push origin feature-branch`).
 7. **Create a pull request** to merge your changes.
 
