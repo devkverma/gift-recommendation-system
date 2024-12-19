@@ -127,8 +127,11 @@ This is the form page.
 
 This is the recommendation page.
 ![RECOMMEND](screenshots/recommend_page.png)
----
 
+---
+## Demo video
+[![Watch this video](https://img.youtube.com/vi/Q3NV5QgbyGA/0.jpg)](https://www.youtube.com/watch?v=Q3NV5QgbyGA)
+---
 ## Contributing
 
 We welcome contributions! If you'd like to contribute to this project, please follow the steps below:
