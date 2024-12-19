@@ -60,7 +60,7 @@ class Recommend:
 
         similarity_scores = cosine_similarity(userVector, self.vectors)
 
-        top_n = 3
+        top_n = 4
         top_n_indices = similarity_scores.argsort()[0][-top_n:][::-1] 
 
         products = []
