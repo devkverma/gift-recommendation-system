@@ -27,18 +27,17 @@ class ProductDetails:
 
         if remaining_requests <= 0:
             print(time_to_renew)
-            return (496, time_to_renew)
+            return [496, time_to_renew]
         else:
             if response.status_code != 200:
-                return ('error',response.status_code)
+                return ['error',response.status_code]
             
             else:
                 result = response.json()
-
                 details = {
-                    "title": result.get('productTitle', 'unavailable'),
+                    "title": result['productTitle'] if result['productTitle'] else 'unavailable',
                     "description": result['features'][0] if result['features'] else '* No description available *',
                     "price": result['price'] if result['price'] else 'unavailable',
-                    "image": result.get('imageUrlList', ['https://placehold.jp/300x300.png'])[0],
+                    "image": result['imageUrlList'][0] if result['imageUrlList'] else 'https://placehold.jp/300x300.png',
                 }
                 return details

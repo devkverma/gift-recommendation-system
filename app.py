@@ -31,12 +31,18 @@ def recommendations():
         if idx >= 5:
             break
         details = productdetails.fetchDetails(product)
+        print(product)
 
-        if isinstance(details, list) and len(details) > 1:
+        if isinstance(details, list) and len(recommended_items) == 0:
             if 496 in details:
                 return render_template("rate_limit.html", seconds_left=details[1])
             elif 'error' in details:
                 return render_template("unexpected_error.html", error_message=details[1])
+        elif isinstance(details, list) and len(recommended_items) != 0:
+            if 496 in details:
+                continue
+            elif 'error' in details:
+                continue
         elif details:
             recommended_items.append(details)
 
