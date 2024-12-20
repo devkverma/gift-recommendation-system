@@ -168,7 +168,6 @@ Please ensure that your code follows the project’s coding conventions, and con
 ├── notebook/             # Jupyter notebook for model creation
 
 ```
-Here’s how you can explain the mechanism behind your project in the README:
 
 ---
 
